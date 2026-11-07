@@ -1,0 +1,132 @@
+/* Reset delle impostazioni di base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #5e9223 0%, #b1cf06 100%);
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    min-height: 100vh;
+    padding:4vh 2vh;
+}
+
+/* Contenitore principale */
+.container {
+    width: 100%;
+    min-height: 92vh;
+    display: flex;
+    text-align: center;
+    flex-direction: column; /* Crea una struttura a colonna */
+}
+
+/* Stile del Profilo */
+.profile {
+    margin-bottom: 6vh
+}
+
+.avatar img {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #6366f1; /* Bordo colorato stile cyberpunk */
+    box-shadow: 0 0 15px rgba(99, 102, 241, 0.5);
+    margin-bottom: 16px;
+}
+
+.profile h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.profile .bio {
+    font-size: 0.95rem;
+    color: #cdcddf;
+    line-height: 1.5;
+}
+
+/* Contenitore dei Link */
+.links-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3vh;
+}
+
+/* Stile generale del pulsante/link */
+.link-card {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 16px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Effetto Hover sui pulsanti */
+.link-card:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #6366f1;
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.2);
+}
+
+/* Icona allineata a sinistra */
+.link-card .icon {
+    font-size: 1.3rem;
+    margin-right: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.link-card .text {
+    flex-grow: 1;
+    text-align: center;
+    margin-right: 32px; /* Bilancia lo spazio dell'icona a sinistra per centrare il testo */
+}
+
+/* Colori personalizzati al passaggio del mouse per Telegram e Amazon (Opzionale) */
+.link-card.telegram:hover {
+    border-color: #0088cc;
+    box-shadow: 0 8px 20px rgba(0, 136, 204, 0.3);
+}
+
+.link-card.amazon:hover {
+    border-color: #ff9900;
+    box-shadow: 0 8px 20px rgba(255, 153, 0, 0.3);
+}
+
+/* Stile del Footer */
+.footer {
+    margin-top: auto;
+    padding-top: 6vh;
+    font-size: 0.8rem;
+    color: #bbc3cf;
+}
+
+
+/* Ottimizzazione responsive per schermi molto piccoli */
+@media (max-width: 400px) {
+    body {
+        padding: 24px 12px;
+    }
+    .link-card {
+        padding: 14px 18px;
+        font-size: 0.95rem;
+    }
+}
